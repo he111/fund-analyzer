@@ -133,21 +133,25 @@ function HighChartsComponent() {
     };
     
     return (
-      <div id="highcharts" >
-        <HighchartsReact highcharts={Highcharts} options={options} />
+      <div id="highcharts">
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={options}
+          allowChartUpdate={true}
+        />
         <div className="warning">
           <FontAwesomeIcon
             className="fa-exclamation-triangle"
             icon={faExclamationTriangle}
           />
-            <span>
-                <strong>Account Wrap &amp; Flat Fees:</strong>
-                These account-based fees may be charged in addition to fund fees
-                as a percentage-based or flat-fee or both. They can have a
-                significant impact on your overall returns. Use our advanced
-                options to analyze wrap and flat fees.
-            </span>
-          </div>
+          <span>
+            <strong>Account Wrap &amp; Flat Fees:</strong>
+            These account-based fees may be charged in addition to fund fees as
+            a percentage-based or flat-fee or both. They can have a significant
+            impact on your overall returns. Use our advanced options to analyze
+            wrap and flat fees.
+          </span>
+        </div>
       </div>
     );
 }
