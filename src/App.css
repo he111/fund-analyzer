@@ -16,22 +16,9 @@ html {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.logo-pic {
-  background-color: navy;
-  width: 100%;
+.brand-text {
+  margin-left:0.3rem;
+  font-weight: bold;
 }
 .fContainer{
   width: 30%;
@@ -45,7 +32,9 @@ html {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 13px;
 }
-
+.RSI {
+  color:red;
+}
 .show-grid {
   margin: 0.5em;
   background: #FFFFFF;
@@ -98,10 +87,12 @@ html {
   justify-content: center;
   align-items: center;
 }
-
+.action-border {
+  border: 1px solid black;
+}
 .action-item {
   height: 100%;
-  border: 1px solid black;
+  
   align-items: center;
   justify-content: center;
 }
@@ -109,7 +100,6 @@ html {
 #highcharts{
   width: 100%;
   margin-top: 5rem;
-
 }
 
 .warning {
@@ -131,7 +121,6 @@ html {
 }
 
 .fa {
-   
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
@@ -142,4 +131,9 @@ html {
 .fa-icon {
   display: block;
   margin: auto;
+}
+
+.detail-btn{
+  width: 100%;
+  align-items: center;
 }

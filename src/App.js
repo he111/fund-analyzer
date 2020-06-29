@@ -2,10 +2,11 @@ import React, { useRef } from 'react';
 import "./App.css";
 import GeneralDetailComponent from "./components/GeneralDetailComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Navbar, Nav, Button, Form, FormControl } from "react-bootstrap";
+import { Container, Row, Col, Navbar, Nav, Button } from "react-bootstrap";
 import HighChartsComponent from "./components/HighchartsComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faDollarSign, faChartLine, faTags, faInfoCircle, faPrint } from "@fortawesome/free-solid-svg-icons";
+import HeaderComponent from "./components/HeaderComponent";
 
 const scrollToRef = (ref) => {
   window.scrollTo(0,ref.current.offsetTop);
@@ -16,26 +17,7 @@ function App() {
    const executeScroll = (ref) => scrollToRef(ref);
   return (
     <div>
-      <Navbar sticky="top" bg="primary" variant="dark">
-        <Navbar.Brand href="#home">
-          <img
-            src="fundanalyzer.png"
-            alt="fund analyzer"
-            width="30"
-            height="30"
-          />
-          Fund Analyzer
-        </Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="danger">Analyze >></Button>
-        </Form>
-      </Navbar>
+      <HeaderComponent />
       <Nav
         variant="pills"
         defaultActiveKey="/home"

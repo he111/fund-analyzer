@@ -6,16 +6,7 @@ import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import {
-  Container,
-  Row,
-  Col,
-  Navbar,
-  Nav,
-  Button,
-  Form,
-  FormControl,
-} from "react-bootstrap";
+
 
 
 function HighChartsComponent() {
@@ -28,8 +19,8 @@ function HighChartsComponent() {
         .then((res) => {
           const datum = res.data;
           console.log(datum[0].data);
-          this.setState({ data: datum[0].data });
-          console.log(this.state.data);
+          setData(datum[0].data );
+          console.log(data);
         });
     }
     fetchData();
@@ -37,7 +28,7 @@ function HighChartsComponent() {
     const options = {
       chart: {
         type: "column",
-        width: 800,
+        width: 1100,
       },
       title: {
         text: "Potential Cost Over Time",
@@ -46,26 +37,7 @@ function HighChartsComponent() {
       series: [
         {
           name: "Annual Operating Expense",
-          data: this.state.data,
-          //   [
-          //     0,
-          //     0.1,
-          //     0.32,
-          //     0.33,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //     0.45,
-          //   ],
+          data: data,
         },
         { name: "Front-End Sales Charges" },
         { name: "Back-End Sales Charges" },
@@ -103,7 +75,7 @@ function HighChartsComponent() {
         },
         labels: {
           format: "{value}%",
-          // step:2.5,
+        //   step:2.5,
         },
         max: 10,
       },
@@ -129,6 +101,32 @@ function HighChartsComponent() {
             "%"
           );
         },
+      },
+      responsive: {
+        rules: [
+          {
+            condition: {
+              maxWidth: 1200,
+            },
+            chartOptions: {
+              legend: {
+                align: "right",
+                verticalAlign: "top",
+                layout: "vertical",
+              },
+              yAxis: {
+                labels: {
+                  align: "left",
+                  x: 0,
+                  y: -5,
+                },
+                title: {
+                  text: null,
+                },
+              },
+            },
+          },
+        ],
       },
     };
     

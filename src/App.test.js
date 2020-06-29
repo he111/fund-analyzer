@@ -1,9 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, getByLabelText} from "@testing-library/react";
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('title should not be empty',()=>{
+  const title = document.querySelector('nav-item');
+  console.log(title);
+  expect(title).toBeDefined();
 });
+describe("My Test Suite", () => {
+  it("My Test Case", () => {
+    expect(true).toEqual(true);
+  });
+});
+
