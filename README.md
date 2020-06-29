@@ -1,4 +1,4 @@
-# fund-analyzer
+# Fund Analyzer
 
 ### Proof of Concept Project About Exchange-Traded Fund Analysis Tool
 -	Implemented interactive data visualization and extrapolation using __Highcharts__ wrapper for React
