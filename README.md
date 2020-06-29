@@ -1,5 +1,11 @@
 # fund-analyzer
 
+### Proof of Concept Project About Exchange-Traded Fund Analysis Tool
+•	Implemented interactive data visualization and extrapolation using __Highcharts__ wrapper for React
+•	Consumed __RESTful API__ using __Axios__ in the user interface and integrated the API request and responses using JSON objects and tested using Postman.
+•	Designed user interface using __React Bootstrap__ and performed unit testing using __JEST__.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
