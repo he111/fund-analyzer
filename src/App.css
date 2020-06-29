@@ -1,16 +1,8 @@
-.App {
-  text-align: center;
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    scroll-behavior: smooth;
 }
 
 .App-header {
@@ -35,4 +27,119 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo-pic {
+  background-color: navy;
+  width: 100%;
+}
+.fContainer{
+  width: 30%;
+  text-align: left;
+  padding-left:50px;
+}
+
+.fList{
+  list-style-type:'> ';
+  text-align: left;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+}
+
+.show-grid {
+  margin: 0.5em;
+  background: #FFFFFF;
+  border: 1px solid #D7D7D7;
+  justify-content: center;
+  align-items: stretch; 
+  -ms-flex-line-pack: stretch;
+   align-content: stretch; 
+  height:100%;
+}
+
+.nav-top{
+  position: sticky;
+  width: 100%;
+}
+.sidebar{
+  height: 100%; 
+  width: 80px; 
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  /* top: 0;  */
+  left: 0;
+  overflow-x: hidden; 
+  padding-top: 1.5em;
+}
+.side-text {
+  text-align: center;
+  font-size: 13px;
+  color: #1965A1;
+}
+.g-wrap-row {
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.col-detail {
+  height: 7rem;
+  flex: 1;
+  flex-direction: column;
+}
+.col-title {
+  font-weight: bold;
+  font-size:14px;
+  color: #9B9B9B;
+  margin-bottom: 0.5em;
+}
+
+.abtn {
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-item {
+  height: 100%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+#highcharts{
+  width: 100%;
+  margin-top: 5rem;
+
+}
+
+.warning {
+    border: 1px solid #f3be2a;
+    padding: 0.5em 1em;
+}
+
+.fa-exclamation-triangle {
+  float:left;
+  color: #f2d640;
+  font-size: 45px;
+  padding: 0 10px;
+}
+
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+
+.fa {
+   
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-icon {
+  display: block;
+  margin: auto;
 }
