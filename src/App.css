@@ -45,7 +45,25 @@ html {
    align-content: stretch; 
   height:100%;
 }
-
+.outter-grid {
+  margin: 0.5em;
+  border: 1px solid #D7D7D7;
+  height:100%;
+  width: 100%;
+}
+.show-left-grid {
+  margin: 0.5em;
+  background: #FFFFFF;
+  border-left: 1px solid #D7D7D7;
+  justify-content: center;
+  align-items: stretch; 
+  -ms-flex-line-pack: stretch;
+  align-content: stretch; 
+  
+}
+.AOE-detail {
+  text-align: center;
+}
 .nav-top{
   position: sticky;
   width: 100%;

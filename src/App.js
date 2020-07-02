@@ -2,11 +2,13 @@ import React, { useRef } from 'react';
 import "./App.css";
 import GeneralDetailComponent from "./components/GeneralDetailComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Navbar, Nav, Button } from "react-bootstrap";
+import { Container, Row, Col, Nav, Button } from "react-bootstrap";
 import HighChartsComponent from "./components/HighchartsComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faDollarSign, faChartLine, faTags, faInfoCircle, faPrint } from "@fortawesome/free-solid-svg-icons";
 import HeaderComponent from "./components/HeaderComponent";
+
+import AOEComponent from './components/AOEComponent';
 
 const scrollToRef = (ref) => {
   window.scrollTo(0,ref.current.offsetTop);
@@ -73,23 +75,32 @@ function App() {
           </Col>
         </Row>
         <Row ref={feeRef}>
-          <Col>Annual Operating Expenses</Col>
-          <Col>Front-End Sales Charges</Col>
-          <Col>Back-End Sales Charges(CDSC)</Col>
-          <Col>Redemption Fees</Col>
+          <AOEComponent />
         </Row>
         <Row ref={discountRef}>
           <Row>
-            <Col>Letters of Intent (LOI) Allowed</Col>
+            <Col>
+              Letters of Intent (LOI) Allowed
+              <Col>N/A</Col>
+            </Col>
           </Row>
           <Row>
-            <Col>Sales Charge Waiver</Col>
+            <Col>
+              Sales Charge Waiver
+              <Col>N/A</Col>
+            </Col>
           </Row>
           <Row>
-            <Col>Contingment Deferred Sales Charge (CDSC)</Col>
+            <Col>
+              Contingment Deferred Sales Charge (CDSC)
+              <Col>N/A</Col>
+            </Col>
           </Row>
           <Row>
-            <Col>Rights of Accumulation (ROA) Allowed</Col>
+            <Col>
+              Rights of Accumulation (ROA) Allowed
+              <Col>N/A</Col>
+            </Col>
           </Row>
         </Row>
       </Container>

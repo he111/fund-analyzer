@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import "../../src/App.css";
-import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
@@ -18,13 +16,18 @@ function HighChartsComponent() {
         )
         .then((res) => {
           const datum = res.data;
-          console.log(datum[0].data);
+          // console.log(datum[0].data);
           setData(datum[0].data );
-          console.log(data);
+          // console.log(data);
         });
     }
-    fetchData();
+    
+    // return () => {
+      fetchData();
+    // }
     },[]);
+
+    
     const options = {
       chart: {
         type: "column",

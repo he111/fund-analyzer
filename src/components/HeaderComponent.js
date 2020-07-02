@@ -8,8 +8,7 @@ import {
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFunnelDollar,
-  faSearchDollar,
+  faFunnelDollar
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 

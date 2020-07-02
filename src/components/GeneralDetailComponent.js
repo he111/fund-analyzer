@@ -56,7 +56,7 @@ function GeneralDetailComponent() {
             </Col>
           </Col>
         </Row>
-        <Row className="show-grid abtn" xs={1} lg={3}>
+        <Row className="abtn" xs={1} lg={3}>
           <Col className="action-item action-border">
             <Button className="tel-btn detail-btn" variant="link">
               Tel
