@@ -9,15 +9,24 @@ const options = {
     width: 450,
   },
   title: {
-      text: null,
+    text: null,
   },
-  plotOptions:{
+  plotOptions: {
     column: {
-        stacking: 'percent'
-    }
+      stacking: "percent",
+    },
   },
   legend: {
-    enabled: true,
+    align: "right",
+    x: -30,
+    verticalAlign: "top",
+    y: 25,
+    floating: true,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || "white",
+    borderColor: "#CCC",
+    borderWidth: 1,
+    shadow: false,
   },
   tooltip: {
     shared: true,
@@ -35,7 +44,7 @@ const options = {
       data: [
         {
           name: "0.45%",
-          data: [0.00, 0.45, 0.60, 0.61],
+          data: [0.0, 0.45, 0.6, 0.61],
         },
       ],
     },
