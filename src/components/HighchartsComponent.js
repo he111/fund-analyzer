@@ -3,6 +3,7 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
+import { Alert } from "react-bootstrap";
 import axios from "axios";
 
 
@@ -140,7 +141,7 @@ function HighChartsComponent() {
           options={options}
           allowChartUpdate={true}
         />
-        <div className="warning">
+        <Alert variant="warning">
           <FontAwesomeIcon
             className="fa-exclamation-triangle"
             icon={faExclamationTriangle}
@@ -152,7 +153,7 @@ function HighChartsComponent() {
             impact on your overall returns. Use our advanced options to analyze
             wrap and flat fees.
           </span>
-        </div>
+        </Alert>
       </div>
     );
 }

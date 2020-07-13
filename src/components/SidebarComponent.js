@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import "./App.css";
 import {
   Nav,
@@ -12,8 +12,11 @@ import {
   faInfoCircle,
   faPrint,
 } from "@fortawesome/free-solid-svg-icons";
+import EmailFormComponent from './EmailFormComponent';
 
 function SidebarComponent() {
+  const [modalShow, setModalShow] = React.useState(false);
+ 
     return (
       <div>
         <Nav
@@ -46,14 +49,19 @@ function SidebarComponent() {
               Discount
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link className="side-text" eventKey="share">
+          <Nav.Item >
+            <Nav.Link className="side-text" >
               <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
               Share
             </Nav.Link>
+            
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link className="side-text" eventKey="print">
+            <Nav.Link
+              className="side-text"
+              eventKey="print"
+              onClick={() => window.print()}
+            >
               <FontAwesomeIcon icon={faPrint} className="fa-icon" />
               Print
             </Nav.Link>

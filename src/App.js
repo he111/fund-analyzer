@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import "./App.css";
 import GeneralDetailComponent from "./components/GeneralDetailComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Nav, Button } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import HighChartsComponent from "./components/HighchartsComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faDollarSign, faChartLine, faTags, faInfoCircle, faPrint } from "@fortawesome/free-solid-svg-icons";
 import HeaderComponent from "./components/HeaderComponent";
-
+import EmailFormComponent from "./components/EmailFormComponent";
 import AOEComponent from './components/AOEComponent';
 
 const scrollToRef = (ref) => {
@@ -17,6 +17,7 @@ const scrollToRef = (ref) => {
 function App() {
    const {infoRef, chartRef, feeRef, discountRef} = useRef(null);
    const executeScroll = (ref) => scrollToRef(ref);
+   const [modalShow, setModalShow] = React.useState(false);
   return (
     <div>
       <HeaderComponent />
@@ -51,10 +52,18 @@ function App() {
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link className="side-text" eventKey="share">
+          <Nav.Link
+            className="side-text"
+            eventKey="share"
+            onClick={() => setModalShow(true)}
+          >
             <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
             Share
           </Nav.Link>
+          <EmailFormComponent
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </Nav.Item>
         <Nav.Item>
           <Nav.Link className="side-text" eventKey="print">
@@ -77,9 +86,7 @@ function App() {
         <Row ref={feeRef}>
           <AOEComponent />
         </Row>
-        <Row ref={discountRef}>
-          
-        </Row>
+        <Row ref={discountRef}></Row>
       </Container>
     </div>
   );
